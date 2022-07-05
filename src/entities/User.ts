@@ -16,6 +16,11 @@ export class User{
         length: 15
     })
     cpf: string;
+
+    @Column('varchar', {
+        length: 100
+    })
+    username: string;
     
     @Exclude()
     @Column('varchar', {

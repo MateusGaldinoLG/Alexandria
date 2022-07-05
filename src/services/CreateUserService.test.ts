@@ -20,6 +20,7 @@ describe('CreateUserService', () => {
 
         const result = await createUserService.execute({
             id: uuid(),
+            username: 'user123',
             email: 'teste@gmail.com',
             cpf: '123.456.789.10',
             password: '123456',
@@ -30,6 +31,7 @@ describe('CreateUserService', () => {
         console.log(result);
 
         expect(result).toHaveProperty(['id']);
+        expect(result).toHaveProperty(['username']);
         expect(result).toHaveProperty(['email']);
         expect(result).toHaveProperty(['cpf']);
         expect(result).toHaveProperty(['borrowed']);
@@ -43,6 +45,7 @@ describe('CreateUserService', () => {
 
         const result = await createUserService.execute({
             id: uuid(),
+            username: 'user123',
             email: 'teste2@gmail.com',
             cpf: '223.456.789.10',
             password: '123456',
@@ -52,6 +55,7 @@ describe('CreateUserService', () => {
         console.log(result);
 
         expect(result).toHaveProperty(['id']);
+        expect(result).toHaveProperty(['username']);
         expect(result).toHaveProperty(['email']);
         expect(result).toHaveProperty(['cpf']);
         expect(result).toHaveProperty(['borrowed']);
@@ -74,6 +78,7 @@ describe('CreateUserService', () => {
 
         await expect(createUserService.execute({
             id: uuid(),
+            username: 'user123',
             email: mockUser.email,
             cpf: '109.876.543.21',
             password: '123456',
@@ -91,6 +96,7 @@ describe('CreateUserService', () => {
 
         await expect(createUserService.execute({
             id: uuid(),
+            username: 'user123',
             email: 'teste5@gmail.com',
             cpf: mockUser.cpf,
             password: '123456',

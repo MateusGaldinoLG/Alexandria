@@ -5,6 +5,7 @@ import { User } from "../entities/User";
 
 interface IUser {
     id: string;
+    username: string;
     email: string;
     cpf: string;
     password: string;
@@ -13,7 +14,7 @@ interface IUser {
 }
 
 export class CreateUserService{
-    async execute({id, email, cpf, password, admin, dob}: IUser){
+    async execute({id, username, email, cpf, password, admin, dob}: IUser){
         const userRepo = AppDataSource.getRepository(User).extend(User);
 
         const userAlreadyExists = await userRepo.findOne({
@@ -35,6 +36,7 @@ export class CreateUserService{
 
         const user = userRepo.create({
             id,
+            username,
             email,
             cpf,
             password: passwordHash,

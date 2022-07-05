@@ -29,6 +29,7 @@ describe('GetUserService', () => {
         const result = await getUserService.execute(mockUser.id);
 
         expect(result).toHaveProperty(['id']);
+        expect(result).toHaveProperty(['username']);
         expect(result).toHaveProperty(['email']);
         expect(result).toHaveProperty(['cpf']);
         expect(result).toHaveProperty(['borrowed']);

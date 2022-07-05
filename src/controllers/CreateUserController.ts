@@ -7,7 +7,7 @@ class CreateUserController{
     async handle(req: Request, res: Response){
         const createUserService = new CreateUserService();
 
-        const {email, cpf, password, admin, date_of_birth} = req.body;
+        const {email, username, cpf, password, admin, date_of_birth} = req.body;
 
         const id = uuid();
 
@@ -25,7 +25,7 @@ class CreateUserController{
             return res.status(400).json(isPasswordValid[1]);
         }
 
-        const user = await createUserService.execute({id, email, cpf, password, admin, dob: date_of_birth});
+        const user = await createUserService.execute({id, username, email, cpf, password, admin, dob: date_of_birth});
 
         return res.status(201).json(user);
     }

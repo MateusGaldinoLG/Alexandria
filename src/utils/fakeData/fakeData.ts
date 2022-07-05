@@ -13,6 +13,7 @@ export class FakeData{
     async createUser(fakeUser: IFakeUser){
         const user = await this.createUserService.execute({
             id: uuid(),
+            username: 'user123',
             email: fakeUser.email,
             cpf: fakeUser.cpf,
             password: fakeUser.password,
