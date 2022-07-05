@@ -1,7 +1,6 @@
 import { AppDataSource } from "../data-source"
 import { CreateUserService } from "./CreateUserService";
 import {v4 as uuid} from 'uuid';
-import { User } from "../entities/User";
 import { FakeData } from "../utils/fakeData/fakeData";
 
 
