@@ -18,7 +18,7 @@ class GetUserService{
             throw new NotFoundError(`User with id ${id} does not exists`);
         }
 
-        return instanceToPlain(user);
+        return user;
     }
 }
 

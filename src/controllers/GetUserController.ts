@@ -1,3 +1,4 @@
+import { instanceToPlain } from "class-transformer";
 import { Request, Response } from "express";
 import { validate } from "uuid";
 import { GetUserService } from "../services/GetUserService";
@@ -14,7 +15,7 @@ class GetUserController{
 
         const user = await getUserService.execute(id);
 
-        return res.status(200).json(user);
+        return res.status(200).json(instanceToPlain(user));
     }
 }
 

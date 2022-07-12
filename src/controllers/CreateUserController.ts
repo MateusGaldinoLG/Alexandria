@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import { CreateUserService } from "../services/CreateUserService";
 import { v4 as uuid } from "uuid";
 import { isValidCpf, isValidEmail, isValidPassword } from "../utils/validations/userValidator";
+import { instanceToPlain } from "class-transformer";
 
 class CreateUserController{
     async handle(req: Request, res: Response){
@@ -27,7 +28,7 @@ class CreateUserController{
 
         const user = await createUserService.execute({id, username, email, cpf, password, admin, dob: date_of_birth});
 
-        return res.status(201).json(user);
+        return res.status(201).json(instanceToPlain(user));
     }
 }
 

@@ -1,5 +1,4 @@
 import { hash } from "bcryptjs";
-import { instanceToPlain } from "class-transformer";
 import { AppDataSource } from "../data-source";
 import { User } from "../entities/User";
 
@@ -47,6 +46,7 @@ export class CreateUserService{
 
         await userRepo.save(user);
 
-        return instanceToPlain(user);
+        // TODO: think about it later
+        return user;
     }
 }

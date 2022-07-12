@@ -36,8 +36,8 @@ describe('CreateUserService', () => {
         expect(result).toHaveProperty(['cpf']);
         expect(result).toHaveProperty(['borrowed']);
         expect(result).toHaveProperty(['date_of_birth']);
-        expect(result).not.toHaveProperty(['password'])
-        expect(result).not.toHaveProperty(['admin'])        
+        expect(result).toHaveProperty(['password'])
+        expect(result).toHaveProperty(['admin'])        
     })
 
     it(`Should create user even without admin detail`, async () => {
@@ -60,8 +60,8 @@ describe('CreateUserService', () => {
         expect(result).toHaveProperty(['cpf']);
         expect(result).toHaveProperty(['borrowed']);
         expect(result).toHaveProperty(['date_of_birth']);
-        expect(result).not.toHaveProperty(['password']);
-        expect(result).not.toHaveProperty(['admin'])        
+        expect(result).toHaveProperty(['password']);
+        expect(result).toHaveProperty(['admin'])        
     })
 
 
