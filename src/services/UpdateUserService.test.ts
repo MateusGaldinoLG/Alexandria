@@ -30,7 +30,7 @@ describe('UpdateUserService', () => {
 
         const newUser = await updateUserService.execute({
             email: mockUser.email,
-            password: mockUser.password,
+            password: '123456',
             username:'newusername123'
         });
 

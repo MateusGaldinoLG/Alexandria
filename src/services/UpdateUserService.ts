@@ -31,8 +31,14 @@ class UpdateUserService{
             throw new NotFoundError('Wrong email or password')
         }
 
-        user.username = username ? username : user.username;
-        user.date_of_birth = dob ? new Date(dob) : user.date_of_birth;
+        if(dob){
+            let date_of_birth = new Date(dob);
+            user.date_of_birth = user.date_of_birth != date_of_birth ? date_of_birth : user.date_of_birth;
+        }
+
+        if(username){
+            user.username = user.username != username ? username : user.username;
+        }
 
         const newUser = await userRepo.save(user);
 

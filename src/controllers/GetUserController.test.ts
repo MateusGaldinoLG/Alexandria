@@ -3,8 +3,6 @@ import { AppDataSource } from "../data-source";
 import { FakeData } from "../utils/fakeData/fakeData";
 import { makeMockResponse } from "../utils/mocks/MockResponse";
 import { GetUserController } from "./GetUserController";
-import {v4 as uuid} from 'uuid';
-
 
 describe('GetUserController', () => {
     beforeAll(async () => {
@@ -21,7 +19,7 @@ describe('GetUserController', () => {
     const getUserController = new GetUserController();
     const response = makeMockResponse();
 
-    it('Should return 201 if a user is found', async () => {
+    it('Should return 200 if a user is found', async () => {
         const mockUser = await fakeData.createUser({
             email: 'teste3@gmail.com',
             cpf: '323.456.789.10',
