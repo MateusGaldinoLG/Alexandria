@@ -1,4 +1,4 @@
-import { CreateUserService } from "../../services/CreateUserService";
+import { CreateUserService } from "../services/User/CreateUserService";
 import { v4 as uuid } from "uuid";
 
 interface IFakeUser{

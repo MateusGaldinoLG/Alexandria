@@ -1,7 +1,7 @@
 import { instanceToPlain } from "class-transformer";
 import { Request, Response } from "express";
 import { validate } from "uuid";
-import { GetUserService } from "../services/GetUserService";
+import { GetUserService } from "../../services/User/GetUserService";
 
 class GetUserController{
     async handle(req: Request, res: Response){

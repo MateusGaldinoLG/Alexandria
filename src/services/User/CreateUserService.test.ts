@@ -1,7 +1,7 @@
-import { AppDataSource } from "../data-source"
+import { AppDataSource } from "../../data-source"
 import { CreateUserService } from "./CreateUserService";
 import {v4 as uuid} from 'uuid';
-import { FakeData } from "../utils/fakeData/fakeData";
+import { FakeData } from "../../mocks/fakeData";
 
 
 describe('CreateUserService', () => {

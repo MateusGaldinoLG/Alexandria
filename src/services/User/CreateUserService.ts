@@ -1,6 +1,6 @@
 import { hash } from "bcryptjs";
-import { AppDataSource } from "../data-source";
-import { User } from "../entities/User";
+import { AppDataSource } from "../../data-source";
+import { User } from "../../entities/User";
 
 interface IUser {
     id: string;

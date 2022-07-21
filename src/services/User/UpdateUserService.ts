@@ -1,8 +1,8 @@
 import { compare } from "bcryptjs";
 import { instanceToPlain } from "class-transformer";
-import { AppDataSource } from "../data-source";
-import { User } from "../entities/User";
-import { NotFoundError } from "../utils/errors/Errors";
+import { AppDataSource } from "../../data-source";
+import { User } from "../../entities/User";
+import { NotFoundError } from "../../utils/errors/Errors";
 
 interface IAuthUser{
     email: string;

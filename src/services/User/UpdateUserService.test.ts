@@ -1,5 +1,5 @@
-import { AppDataSource } from "../data-source";
-import { FakeData } from "../utils/fakeData/fakeData";
+import { AppDataSource } from "../../data-source";
+import { FakeData } from "../../mocks/fakeData";
 import { UpdateUserService } from "./UpdateUserService";
 
 

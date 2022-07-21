@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import { UpdateUserService } from "../services/UpdateUserService";
-import { isValidEmail } from "../utils/validations/userValidator";
+import { UpdateUserService } from "../../services/User/UpdateUserService";
+import { isValidEmail } from "../../utils/validations/userValidator";
 
 
 class UpdateUserController{

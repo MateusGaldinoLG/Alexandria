@@ -1,7 +1,7 @@
 import { Request, Response, Router } from "express";
-import { CreateUserController } from "./controllers/CreateUserController";
-import { GetUserController } from "./controllers/GetUserController";
-import { UpdateUserController } from "./controllers/UpdateUserController";
+import { CreateUserController } from "./controllers/User/CreateUserController";
+import { GetUserController } from "./controllers/User/GetUserController";
+import { UpdateUserController } from "./controllers/User/UpdateUserController";
 
 const createUserController = new CreateUserController();
 const getUserController = new GetUserController();

@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
-import { CreateUserService } from "../services/CreateUserService";
+import { CreateUserService } from "../../services/User/CreateUserService";
 import { v4 as uuid } from "uuid";
-import { isValidCpf, isValidEmail, isValidPassword } from "../utils/validations/userValidator";
+import { isValidCpf, isValidEmail, isValidPassword } from "../../utils/validations/userValidator";
 import { instanceToPlain } from "class-transformer";
 
 class CreateUserController{

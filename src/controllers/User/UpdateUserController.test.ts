@@ -1,7 +1,7 @@
 import { Request } from "express";
-import { AppDataSource } from "../data-source"
-import { FakeData } from "../utils/fakeData/fakeData";
-import { makeMockResponse } from "../utils/mocks/MockResponse";
+import { AppDataSource } from "../../data-source"
+import { FakeData } from "../../mocks/fakeData";
+import { makeMockResponse } from "../../mocks/MockResponse";
 import { UpdateUserController } from "./UpdateUserController";
 
 describe('UpdateUserController', () => {

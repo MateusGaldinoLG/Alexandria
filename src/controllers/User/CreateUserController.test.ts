@@ -1,6 +1,6 @@
 import { Request } from "express";
-import { AppDataSource } from "../data-source";
-import { makeMockResponse } from "../utils/mocks/MockResponse";
+import { AppDataSource } from "../../data-source";
+import { makeMockResponse } from "../../mocks/MockResponse";
 import { CreateUserController } from "./CreateUserController";
 
 
